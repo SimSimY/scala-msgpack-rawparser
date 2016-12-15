@@ -5,5 +5,4 @@ package info.simsimy.MsgPackParser
   */
 trait ValueNode[T] extends Node {
   def value: T
-
 }

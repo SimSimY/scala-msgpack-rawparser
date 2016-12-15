@@ -5,6 +5,7 @@ package info.simsimy.MsgPackParser
   */
 object RawTypes {
 
+
   case class ExtData(Type: Int, Data: Array[Byte])
 
   case class FixInt(value: Short) extends ValueNode[Short]
