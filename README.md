@@ -10,6 +10,10 @@ Currently the main issues are:
 * The project is not formalized for maven repository (POM files and such)
 * Currently the parser only works with `Array[Byte]` and should support any `Byte` Iterable
 
+
+### Compilation and Linking
+As the project is not yet publishing artifacts, you can just clone it and run `sbt package`
+ 
 ### Usage
 
 #### NodeTypes
