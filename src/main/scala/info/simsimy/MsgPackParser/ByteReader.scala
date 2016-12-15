@@ -1,3 +1,5 @@
+package info.simsimy.MsgPackParser
+
 import java.nio.ByteBuffer
 
 /**
@@ -6,21 +8,14 @@ import java.nio.ByteBuffer
 class ByteReader(data: Array[Byte]) {
   var Position : Int = 0
 
+  def getShort(): Short = {
+    return (0.asInstanceOf[Short] | getByte()).asInstanceOf[Short]
+  }
 
   def getByte(): Byte = {
     val res = data(Position)
     Position += 1
     return res
-  }
-
-  def getBytes(count: Long): Array[Byte] = {
-    val startPosition = Position
-    Position += count.asInstanceOf[Int]
-    return data.slice(startPosition, Position)
-  }
-
-  def getShort(): Short = {
-    return (0.asInstanceOf[Short] | getByte()).asInstanceOf[Short]
   }
 
   def getUShort(): Short = {
@@ -34,6 +29,12 @@ class ByteReader(data: Array[Byte]) {
 
   def getUInt(): Int = {
     return getBytes(2).foldLeft(0)((num, nextByte) => (num << 8) | (nextByte & 0xFF)).asInstanceOf[Int]
+  }
+
+  def getBytes(count: Long): Array[Byte] = {
+    val startPosition = Position
+    Position += count.asInstanceOf[Int]
+    return data.slice(startPosition, Position)
   }
 
   def getLong(): Long = {
