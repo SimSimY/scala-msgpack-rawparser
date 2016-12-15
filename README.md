@@ -1,8 +1,8 @@
 # scala-msgpack-rawparser
 
-A simple and light (No external dependencies) library for parsing MsgPack byte arrays into raw objects. Raw objects are representation of the MsgPack with boxed values (rather than mapping into target classes). 
+A simple, light (No external dependencies) and thread safe library for parsing MsgPack byte arrays into raw objects. Raw objects are representation of the MsgPack with boxed values (rather than mapping into target classes). 
  
-As the [msgpack spec][1] is quite permissive, you can easly end up with objects that can't be represented with scala classes (such as Maps/Arrays  with different or (the horror!) complex keys and/or values) 
+As the [msgpack spec][1] is quite permissive, you can easily end up with objects that can't be represented with scala classes (such as Maps/Arrays  with different or (the horror!) complex keys and/or values) 
 
  
 
