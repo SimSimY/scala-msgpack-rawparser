@@ -4,7 +4,7 @@
 A simple, light (No external dependencies) and thread safe library for parsing MsgPack byte arrays into raw objects. 
 Raw objects are representation of the MsgPack with boxed values. 
  
-As the [msgpack spec][1] is quite permissive, you can easily end up with objects that can't be represented with scala classes (such as Maps/Arrays  with different or (the horror!) complex keys and/or values) 
+As the [msgpack spec][1] is quite permissive, you can easily end up with objects that can't be represented with scala classes (such as Maps/Arrays  with different or (the horror!) complex keys and/or values). The scala world can be cold and crewel place for such MsgPacks, that is before the [scala-msgpack-rawparser][5] got to GitHub :)  
 
  
 
@@ -106,3 +106,4 @@ While the code works (mostly :)), tons of stuff can be improved. Feel free to su
 [2]: https://github.com/SimSimY/scala-msgpack-rawparser/blob/master/src/main/scala/examples/Demo.scala "Parser examples"
 [3]: http://www.gryphonet.com "Gryhonet"
 [4]: https://github.com/pinterest/secor "Secor"
+[5]: https://github.com/SimSimY/scala-msgpack-rawparser "You are here!"
